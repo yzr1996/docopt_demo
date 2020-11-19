@@ -10,6 +10,11 @@ Options:
 
 from docopt import docopt
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
-print(opt["--arg4"])
+
+def main(arg1, arg2, arg3, arg4):
+  print(opt)
+  print(type(opt))
+  print(opt["--arg4"])
+
+if __name__ == "__main__":
+    main(opt["<arg1>"], opt["--arg2"], opt["--arg3"], opt["--arg4"])
